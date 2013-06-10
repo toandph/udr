@@ -1,0 +1,108 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 30.06.2009
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <div><ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <div><ul><li><a href="#"><span>level 3</span></a></li></ul></div>
+ *                  </li>
+ *              </ul></div>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+div#menu {
+    height:30px;
+	margin:5px 0 5px 0;
+    background:url(images/nav-bg.png) repeat-x;
+}
+
+div#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+div#menu ul.menu {
+    padding-left: 0;
+}
+
+div#menu li {
+    position: relative;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+}
+   
+div#menu li:hover>ul {
+    left: -2px;
+}
+
+div#menu li:hover>div {
+    visibility: visible;
+}
+
+div#menu li.current a {}
+
+/* menu::level1 */
+div#menu a {
+    position: relative;
+    z-index: 10;
+    height: 30px;
+    display: block;
+    float: left;	
+    padding: 0 10px 0 10px;
+    line-height: 20px;
+    text-decoration: none;
+}
+div#menu span {
+    font: normal 11px 'Lucida Grande',Helvetica,Arial,sans-serif;
+    padding-top: 7px;
+    color:#666;
+    font-weight:bold;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;		
+}
+
+div#menu span.myCurrent {
+    padding-top:7px;
+    color:#900;
+    font-weight:bold;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;		
+}
+
+div#menu ul a:hover span {
+    color: #353535;
+}
+
+a:active, a:focus{
+    border: none;
+    outline: none !important;
+}
+
+div#menu li { 
+	background: url(images/nav_separator.png) top left no-repeat; 	
+}
+
+/* lava lamp */
+div#menu li.back {
+}
+div#menu li.back .left {
+}
+
+
+

@@ -1,0 +1,17 @@
+table thead {
+    display:none !important;
+}
+
+.issueListRow {
+    padding:5px;
+    line-height:17px;
+}
+
+.issueListRow a {
+    text-decoration:none;
+    font-size:11px;
+    font-weight:bold;
+}
+.issueListRow span {
+    color:#624562;
+}

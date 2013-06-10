@@ -1,0 +1,41 @@
+.nodisplay {
+    display: none;
+}
+
+
+#tree ul.dynatree-container {
+    font-size:11px;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    border:0px;
+    width: 300px;
+    height: auto;
+    padding: 5px 20px 5px 0px;
+}
+
+span.ws-wrap span.dynatree-title {
+    white-space: normal;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+span.ws-nowrap span.dynatree-title {
+    white-space: nowrap;
+}
+
+span.ws-pre span.dynatree-title {
+    white-space: pre;
+}
+
+span.dynatree-folder a {
+    font-weight:normal;
+    text-transform:lowercase;
+}
+
+.dynatree-node {
+    text-transform:lowercase;
+}
+
+.dynatree-exp-cdl span.dynatree-expander {
+    background-position: 0px -96px !important;
+}

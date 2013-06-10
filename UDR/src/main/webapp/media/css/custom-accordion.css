@@ -1,0 +1,22 @@
+.ui-accordion .ui-accordion-header {
+	border:0 !important;
+}
+.ui-accordion .ui-accordion-content {
+	padding:0 0 0 30px !important;
+	overflow:hidden !important;
+	border:0 !important;
+	line-height:20px;
+}
+.ui-state-default#accordionMenu {
+	background:none !important;
+}
+.ui-state-default.accordionMenu {
+    background:none !important;
+}
+
+.ui-state-active#accordionMenu {
+    background:none !important;
+}
+.ui-state-active.accordionMenu {
+    background:none !important;
+}

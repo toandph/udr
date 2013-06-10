@@ -1,0 +1,38 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/project/list**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/project/add**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/history/add-json**" access="ROLE_USER, ROLE_ADMIN" />
+        <intercept-url pattern="/history/edit**" access="ROLE_USER, ROLE_ADMIN" />
+        <intercept-url pattern="/history/edit-all**" access="ROLE_USER, ROLE_ADMIN" />
+        <intercept-url pattern="/history/delete**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/user/list**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/user/edit**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/user/add**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/user/delete**" access="ROLE_ADMIN" />
+        <intercept-url pattern="/build/**" access="ROLE_ADMIN" />
+
+        <form-login login-page="/user/login?code=5"
+                    default-target-url="/project/outside-list"
+                    authentication-failure-url="/user/login?code=1"
+                    authentication-success-handler-ref="authenticationSuccessHandler"
+                    always-use-default-target="false" />
+        <logout logout-success-url="/project/outside-list" />
+        <access-denied-handler error-page="/user/error?code=1" />
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="udrAuthenticationProvider">
+
+        </authentication-provider>
+    </authentication-manager>
+    <beans:bean id='udrAuthenticationProvider' class='architectgroup.udr.webserver.security.UDRAuthenticationProvider'/>
+    <beans:bean id="authenticationSuccessHandler" class="architectgroup.udr.webserver.security.UDRAuthenticationSuccessHandler"/>
+</beans:beans>

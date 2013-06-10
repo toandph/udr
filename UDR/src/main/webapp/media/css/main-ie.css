@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-size:11px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	background:#FFF;
+}
+
+table {
+    border-spacing:2px !important;
+}
+
+table.simple-table {
+	border-spacing:0px !important;
+}
+
+button, input[type='button'] {
+	margin-left:0px !important;	
+	margin-right:0px !important;
+}
+
+table tr {
+	
+}
+
+table.display thead th {
+    font-weight:bold;
+}
+
+tbody {
+			border:1px solid #DDDDDD;
+		}
+
+table th#checkboxHeader {
+	padding-left:10px;
+}
+table th#checkboxHeader .DataTables_sort_wrapper {
+	padding-right:0px;
+}
+
+table th#checkboxHeader .DataTables_sort_icon {
+	display:none !important;
+}
+
+form {
+	padding:0px;
+	margin:0px;
+}
+
+.wrapper {
+	margin: auto;
+	padding: 0px;
+	background:#FFF;
+}
+.simpleDiv {
+	border: 1px solid #AAA;
+	padding: 5px;
+	background:#FFF;
+}
+
+.dataTables_wrapper .ui-toolbar {
+	display:none;
+}
+
+.myInput {
+	font-size:11px;
+	width:170px; 
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	border:1px solid #AAA;
+	height:17px;
+	padding:0px;	
+}
+
+textarea {
+	font-size:11px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	border:1px solid #AAA;
+	overflow:auto;
+	padding:0px !important;
+}
+
+select {
+	font-size:11px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	height:20px;
+}
+		
+.ui-button-text {
+   padding:2px 10px 3px 10px !important;
+   height:17px !important;
+} 
+
+.ui-dialog-buttonset button {
+	margin-right:10px !important;
+}
+.ui-icon-alert {
+    float:left !important;
+	margin: 0 7px 0px 0 !important;
+}
+#dialog-confirm {
+	overflow:hidden;
+	min-height:0px;
+	height:auto !important;
+}
+.dynatree-lastsib {
+	padding:0 !important;
+}
+
+.main-form {
+    margin-bottom:5px;
+    margin-top:10px;
+    margin-left:10px;
+    border:1px solid #CCCCCC;
+    padding:10px;
+    width:auto;
+    display:inline-block;
+}
+
+.main-form-header {
+    font-weight:bold;
+    margin-bottom:5px;
+}
+.special-for-form-submit-button {
+    margin-right:-2px;
+    padding-right:0px;
+    'float:right;
+}
+
+#chart-container, #chart2-container {
+    min-width: 400px !important;
+    height: 400px !important;
+    margin: 0 auto !important;
+}
+
+.message-detail {
+    margin:10px 0 10px 0;
+}
